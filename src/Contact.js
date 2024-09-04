@@ -111,7 +111,7 @@ const Contact = () => {
                     height="450"  
                     allowFullScreen="" 
                     loading="lazy" 
-                    title="Unique Title"
+                    title="Location"
                     referrerPolicy="no-referrer-when-downgrade"
                     data-aos="fade-up"
                     data-aos-delay="100">
