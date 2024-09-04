@@ -105,12 +105,13 @@ const Contact = () => {
                     </div>
                     <div className="wrapper" data-aos="fade-in" data-aos-delay="200"></div>
                 </div>
-                <iframe 
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.79908124532753!2d30.944292856863402!3d30.071688125699662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1725445078820!5m2!1sen!2sde"
                     width="600" 
                     height="450"  
                     allowFullScreen="" 
                     loading="lazy" 
+                    title="Unique Title"
                     referrerPolicy="no-referrer-when-downgrade"
                     data-aos="fade-up"
                     data-aos-delay="100">
