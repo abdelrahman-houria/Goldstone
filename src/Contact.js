@@ -88,7 +88,7 @@ const Contact = () => {
                             )}
                         </div>
                     ))}
-                    <div className="onlytext card" data-aos="zoom-in" data-aos-delay="200">
+                    <div className="onlytext card" data-aos="zoom-in" data-aos-delay="300">
                         <h1>CONTACT US:</h1>
                         <p>Contact us for a quote or if you need help, or visit our social media.</p>
                         <div className="imgs">
@@ -103,7 +103,7 @@ const Contact = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="wrapper" data-aos="fade-in" data-aos-delay="200"></div>
+                    <div className="wrapper" data-aos="fade-in" data-aos-delay="400"></div>
                 </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.79908124532753!2d30.944292856863402!3d30.071688125699662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1725445078820!5m2!1sen!2sde"
@@ -114,7 +114,7 @@ const Contact = () => {
                     title="Location"
                     referrerPolicy="no-referrer-when-downgrade"
                     data-aos="fade-up"
-                    data-aos-delay="100">
+                    data-aos-delay="500">
                 </iframe>
             </div>
         </div>

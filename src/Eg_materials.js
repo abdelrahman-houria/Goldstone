@@ -64,7 +64,7 @@ const Eg = () => {
     return ( 
         <div className="eg">
             {data.map(item => (
-                <div className="card" data-aos="fade-left" key={item.id}>
+                <div className="card" data-aos="fade-left" data-aos-delay="200" key={item.id}>
                     <img src={item.imageUrl} alt={item.name} /> {/* Use imageUrl here */}
                     <div className="text">
                         <h1>{item.name}</h1>

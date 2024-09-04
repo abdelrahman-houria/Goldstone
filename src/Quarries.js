@@ -64,10 +64,10 @@ const Quarries = () => {
     return ( 
         <div className="quarries">
             {data.map(item => (
-                <div className="section" data-aos="fade-up" key={item.id}>
+                <div className="section" data-aos="fade-up" data-aos-delay="200" key={item.id}>
                     <div className="cont">
                         <h1>{item.name}</h1>
-                        <div className="card" data-aos="fade-right">
+                        <div className="card" data-aos="fade-right" data-aos-delay="300">
                             <p>{item.disc}</p>
                             <img src={item.imageUrl} alt={item.name} /> {/* Use imageUrl here */}
                         </div>
