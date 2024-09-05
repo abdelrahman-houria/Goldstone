@@ -159,8 +159,8 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 400px;
-  width: 50%;
+  aspect-ratio: 16/9;
+  width: 40%;
   border-radius: 25px;
   overflow: hidden;
   margin: 25px 0px;
@@ -193,38 +193,15 @@ a {
   width: 100%;
   z-index: -500;
   border-radius: 25px;
-  min-height: 400px;
 }
 @media (max-width: 1200px) {
   .app .layout .home .marbles .cards a .card {
     width: 70%;
   }
 }
-@media (max-width: 1000px) {
-  .app .layout .home .marbles .cards a .card {
-    min-height: 300px;
-  }
-  .app .layout .home .marbles .cards a .card img {
-    min-height: 300px;
-  }
-}
-@media (max-width: 750px) {
-  .app .layout .home .marbles .cards a .card {
-    padding: 0;
-    margin: 0;
-    min-height: 250px;
-  }
-  .app .layout .home .marbles .cards a .card img {
-    min-height: 250px;
-  }
-}
 @media (max-width: 550px) {
   .app .layout .home .marbles .cards a .card {
     width: 90%;
-    min-height: 7rem;
-  }
-  .app .layout .home .marbles .cards a .card img {
-    min-height: 7rem;
   }
   .app .layout .home .marbles .cards a .card .title h1 {
     font-size: 28px;
