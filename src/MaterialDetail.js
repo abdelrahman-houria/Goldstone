@@ -14,7 +14,7 @@ const MaterialDetail = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = "Material Detail";
+        document.title = "Material Detail | Goldstone";
         AOS.init({
             duration: 900, // animation duration in milliseconds
             once: true, // whether animation should happen only once - while scrolling down
