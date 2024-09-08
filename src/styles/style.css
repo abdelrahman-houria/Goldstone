@@ -195,7 +195,7 @@ a {
   height: 70vh;
   width: 100%;
   z-index: -500;
-  background-image: url("/public/Images/white.jpg");
+  background-image: url("/public/Icons/white.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -600,7 +600,7 @@ a {
   left: 0;
   min-width: 100%;
   min-height: 50rem;
-  background-image: url("/public/Images/Contact.jpg");
+  background-image: url("/public/Icons/Contact.jpg");
   background-size: cover;
   z-index: -500;
   filter: blur(2px) brightness(60%);
@@ -868,7 +868,7 @@ a {
   z-index: -500;
   min-width: 100%;
   min-height: 70vh;
-  background-image: url(/public/Images/Handshake.jpg);
+  background-image: url(/public/Icons/Handshake.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
