@@ -128,7 +128,7 @@ const MaterialDetail = () => {
                                             controls
                                             className="video"
                                             data-aos="zoom-in"
-                                            data-aos-delay={`${index * 100}`} // Staggered effect for videos
+                                            data-aos-delay="200" // Staggered effect for videos
                                         >
                                             Your browser does not support the video tag.
                                         </video>
