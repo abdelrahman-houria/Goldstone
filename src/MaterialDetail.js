@@ -108,7 +108,7 @@ const MaterialDetail = () => {
                                         <img
                                             key={index}
                                             src={url}
-                                            alt={`Additional Image ${index + 1}`}
+                                            alt={`Quarry ${index + 1}`}
                                             className="additional-image"
                                             data-aos="fade-up"
                                             data-aos-delay="200" 
@@ -117,6 +117,7 @@ const MaterialDetail = () => {
                                 </div>
                             </div>
                         )}
+                        <div className="line"></div>
                         {item.videosWithUrls && item.videosWithUrls.length > 0 && (
                             <div className="videos" data-aos="fade-up" data-aos-delay="200">
                                 <h1>Videos</h1>
