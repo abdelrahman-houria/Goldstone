@@ -443,6 +443,7 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: rgba(2, 2, 2, 0.8);
 }
 @media (max-width: 1150px) {
   .app .layout .nav .cont ul.list {
