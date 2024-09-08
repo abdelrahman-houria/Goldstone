@@ -110,8 +110,8 @@ const MaterialDetail = () => {
                                             src={url}
                                             alt={`Additional Image ${index + 1}`}
                                             className="additional-image"
-                                            data-aos="zoom-in"
-                                            data-aos-delay={`${index * 100}`} // Staggered effect for gallery images
+                                            data-aos="fade-up"
+                                            data-aos-delay="200" 
                                         />
                                     ))}
                                 </div>
@@ -127,8 +127,8 @@ const MaterialDetail = () => {
                                             src={url}
                                             controls
                                             className="video"
-                                            data-aos="zoom-in"
-                                            data-aos-delay="200" // Staggered effect for videos
+                                            data-aos="fade-up"
+                                            data-aos-delay="200" 
                                         >
                                             Your browser does not support the video tag.
                                         </video>
