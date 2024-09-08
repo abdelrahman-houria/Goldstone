@@ -511,6 +511,7 @@ a {
     max-width: 50%;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 5000;
   }
   .app .layout .nav .cont div.burger {
     display: block;
