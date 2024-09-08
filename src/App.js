@@ -8,6 +8,7 @@ import Quarries from "./Quarries";
 import Contact from "./Contact";
 import Layout from "./Layout";
 import Eg from "./Eg_materials";
+import MaterialDetail from "./MaterialDetail";
 
 //Router
 const router = createBrowserRouter(
@@ -17,9 +18,9 @@ const router = createBrowserRouter(
       <Route path="/about" element= {<About />} />
       <Route path="/quarries" element= {<Quarries />} />
       <Route path="/contact" element= {<Contact />} />
+      <Route path="/material/:id" element= {<MaterialDetail />} />
       <Route path="/eg" element={<Eg />} />
     </Route>
-
   )
 )
 

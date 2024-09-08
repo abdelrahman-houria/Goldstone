@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db, storage } from './firebase'; // Ensure 'storage' is imported correctly
 import { ref, getDownloadURL } from 'firebase/storage';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -10,6 +11,7 @@ const Eg = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate(); // Hook to handle navigation
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -52,19 +54,25 @@ const Eg = () => {
             <div className="spinner"></div>
         </div>
     );
-    
+
     if (error) return (
         <div className="error-container">
-            <img src="path/to/error-icon.png" alt="Error" className="error-icon" />
+            <img src="/Icons/error.png" alt="Error" className="error-icon" />
             <p>Error: {error}</p>
             <p>Please restart the page.</p>
         </div>
     );
-    
+
     return ( 
         <div className="eg">
             {data.map(item => (
-                <div className="card" data-aos="fade-left" data-aos-delay="200" key={item.id}>
+                <div
+                    className="card"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                    key={item.id}
+                    onClick={() => navigate(`/material/${item.id}`)} // Navigate on card click
+                >
                     <img src={item.imageUrl} alt={item.name} /> {/* Use imageUrl here */}
                     <div className="text">
                         <h1>{item.name}</h1>

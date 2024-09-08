@@ -6,18 +6,9 @@ const Layout = () => {
   const burgerRef = useRef(null);
   const listRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
-
+  const navRef = useRef(null);
+  
   useEffect(() => {
-
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    // Ensure menu is closed on larger screens if resized
     const handleResize = () => {
       if (window.innerWidth > 1150 && menuOpen) {
         setMenuOpen(false);
@@ -25,13 +16,24 @@ const Layout = () => {
         listRef.current.classList.remove('open');
       }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    const handleScroll = () => {
+      const sticky = window.scrollY > 0;
+      setIsSticky(sticky);
+    };
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+
+    // Set placeholder height
+    if (navRef.current) {
+      document.documentElement.style.setProperty('--nav-height', `${navRef.current.offsetHeight}px`);
+    }
+
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-
   }, [menuOpen]);
 
   const toggleMenu = () => {
@@ -57,9 +59,9 @@ const Layout = () => {
 
   return (
     <div className="layout">
-      <div className={`nav ${isSticky ? 'sticky' : ''}`}>
+      <div className={`nav ${isSticky ? 'sticky' : ''}`} ref={navRef}>
         <div className="cont">
-          <Link to="/"><img src=".\Images\Logo.png" alt="Goldstone" /></Link>
+          <Link to="/"><img src="/Icons/Logo.png" alt="Goldstone" /></Link>
           <ul className="list" ref={listRef}>
             <NavLink to="/" onClick={closeMenuOnClick}>HOME</NavLink>
             <NavLink to="about" onClick={closeMenuOnClick}>ABOUT</NavLink>
@@ -73,21 +75,22 @@ const Layout = () => {
             <div className="line"></div>
           </div>
         </div>
-    </div>
-    <main>
-      <Outlet />
-    </main>
+      </div>
+      <div className="nav-placeholder"></div>
+      <main>
+        <Outlet />
+      </main>
       <div className="footer">
         <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className="card">
-          <img src="./Images/facebook.png" alt="facebook" />
+          <img src="/Icons/facebook.png" alt="facebook" />
           <p>Facebook</p>
         </a>
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="card">
-          <img src="./Images/instagram.png" alt="instagram" />
+          <img src="/Icons/instagram.png" alt="instagram" />
           <p>Instagram</p>
         </a>
         <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" className="card">
-          <img src="./Images/tiktok.png" alt="tiktok" />
+          <img src="/Icons/tiktok.png" alt="tiktok" />
           <p>Tiktok</p>
         </a>
       </div>

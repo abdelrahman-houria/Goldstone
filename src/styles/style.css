@@ -86,6 +86,94 @@ a {
 .app .layout {
   position: relative;
 }
+.app .layout .materialdetail .line {
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  border-radius: 25px;
+  margin: 50px auto;
+}
+.app .layout .materialdetail .wrapper .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  padding: 50px;
+}
+@media (max-width: 1250px) {
+  .app .layout .materialdetail .wrapper .card {
+    flex-direction: column;
+  }
+}
+.app .layout .materialdetail .wrapper .card .text {
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.app .layout .materialdetail .wrapper .card .text h1 {
+  font-size: 52px;
+  margin: 25px;
+}
+.app .layout .materialdetail .wrapper .card .text p {
+  line-height: 25px;
+}
+.app .layout .materialdetail .wrapper .card img {
+  width: 60%;
+  aspect-ratio: 4/3;
+  margin: 50px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+@media (max-width: 1250px) {
+  .app .layout .materialdetail .wrapper .card img {
+    width: 100%;
+  }
+}
+.app .layout .materialdetail .wrapper .images, .app .layout .materialdetail .wrapper .videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.app .layout .materialdetail .wrapper .images h1, .app .layout .materialdetail .wrapper .videos h1 {
+  font-size: 52px;
+  margin: 25px 0px;
+}
+.app .layout .materialdetail .wrapper .images .image-gallery, .app .layout .materialdetail .wrapper .videos .image-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1250px) {
+  .app .layout .materialdetail .wrapper .images .image-gallery, .app .layout .materialdetail .wrapper .videos .image-gallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.app .layout .materialdetail .wrapper .images .image-gallery img, .app .layout .materialdetail .wrapper .videos .image-gallery img {
+  width: 30%;
+  aspect-ratio: 4/3;
+  margin: 25px;
+}
+@media (max-width: 1250px) {
+  .app .layout .materialdetail .wrapper .images .image-gallery img, .app .layout .materialdetail .wrapper .videos .image-gallery img {
+    width: 100%;
+  }
+}
+.app .layout .materialdetail .wrapper .images .video-gallery, .app .layout .materialdetail .wrapper .videos .video-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app .layout .materialdetail .wrapper .images .video-gallery video, .app .layout .materialdetail .wrapper .videos .video-gallery video {
+  margin: 50px 0px;
+  max-width: 100%;
+}
 .app .layout .home .slogan {
   display: flex;
   flex-direction: row;
@@ -276,6 +364,7 @@ a {
   color: black;
   text-align: center;
   padding: 0px 50px;
+  cursor: pointer;
 }
 .app .layout .eg .card:nth-child(even) {
   background-color: black;
@@ -332,25 +421,28 @@ a {
   font-weight: 400;
   font-size: 18px;
 }
+.app .layout .nav-placeholder {
+  display: none; /* Hidden by default */
+}
+.app .layout .nav.sticky + .nav-placeholder {
+  display: block; /* Show placeholder when navbar is sticky */
+  height: 60px; /* Adjust this to the height of your navbar */
+}
 .app .layout .nav {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   background-color: black;
   border-bottom: 2px solid white;
-  position: sticky;
   min-width: 100%;
   z-index: 500;
 }
 .app .layout .nav.sticky {
-  transition: all 0.3s;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1150px) {
   .app .layout .nav .cont ul.list {

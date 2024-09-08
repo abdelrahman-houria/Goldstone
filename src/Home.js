@@ -60,7 +60,7 @@ const Home = () => {
 
     if (error) return (
         <div className="error-container">
-            <img src="path/to/error-icon.png" alt="Error" className="error-icon" />
+            <img src="/Icons/error.png" alt="Error" className="error-icon" />
             <p>Error: {error}</p>
             <p>Please restart the page.</p>
         </div>
@@ -89,11 +89,11 @@ const Home = () => {
                     ))}
                     <div className='message' onClick={() => { navigate('contact'); }} data-aos="fade-right" data-aos-delay="200">
                         <div className="icon">
-                            <img src="./Images/globe.png" alt="Globe Icon" />
+                            <img src="/Icons/globe.png" alt="Globe Icon" />
                         </div>
                         <h1>Click to find our location or send us a message.</h1>
                         <div className="icon">
-                            <img src="./Images/message.png" alt="Message Icon" />
+                            <img src="/Icons/message.png" alt="Message Icon" />
                         </div>
                     </div>
                 </div>

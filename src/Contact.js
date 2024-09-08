@@ -57,7 +57,7 @@ const Contact = () => {
     
     if (error) return (
         <div className="error-container">
-            <img src="path/to/error-icon.png" alt="Error" className="error-icon" />
+            <img src="/Icons/error.png" alt="Error" className="error-icon" />
             <p>Error: {error}</p>
             <p>Please restart the page.</p>
         </div>
