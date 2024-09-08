@@ -93,13 +93,13 @@ const Contact = () => {
                         <p>Contact us for a quote or if you need help, or visit our social media.</p>
                         <div className="imgs">
                             <Link target='_blank' to="https://www.facebook.com/">
-                                <img src="./Images/facebook.png" alt="Facebook" />
+                                <img src="./Icons/facebook.png" alt="Facebook" />
                             </Link>
                             <Link target='_blank' to="https://www.instagram.com/">
-                                <img src="./Images/instagram.png" alt="Instagram" />
+                                <img src="./Icons/instagram.png" alt="Instagram" />
                             </Link>
                             <Link target='_blank' to="https://www.tiktok.com/">
-                                <img src="./Images/tiktok.png" alt="Tiktok" />
+                                <img src="./Icons/tiktok.png" alt="Tiktok" />
                             </Link>
                         </div>
                     </div>
