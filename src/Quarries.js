@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db, storage } from './firebase'; // Ensure 'storage' is imported correctly
 import { ref, getDownloadURL } from 'firebase/storage';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -10,6 +11,8 @@ const Quarries = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate(); // Hook to handle navigation
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -64,7 +67,7 @@ const Quarries = () => {
     return ( 
         <div className="quarries">
             {data.map(item => (
-                <div className="section" data-aos="fade-up" data-aos-delay="200" key={item.id}>
+                <div className="section" data-aos="fade-up" data-aos-delay="200" key={item.id} onClick={() => navigate(`/quarry/${item.id}`)}>
                     <div className="cont">
                         <h1>{item.name}</h1>
                         <div className="card" data-aos="fade-right" data-aos-delay="300">

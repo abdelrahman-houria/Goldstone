@@ -6,7 +6,7 @@ import { ref, getDownloadURL } from 'firebase/storage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const MaterialDetail = () => {
+const QuarryDetail = () => {
     const { id } = useParams(); // Get the 'id' from the URL
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -14,7 +14,7 @@ const MaterialDetail = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title = "Material Detail | Goldstone";
+        document.title = "Quarry Detail | Goldstone";
         AOS.init({
             duration: 900, // animation duration in milliseconds
             once: true, // whether animation should happen only once - while scrolling down
@@ -22,7 +22,7 @@ const MaterialDetail = () => {
 
         const fetchData = async () => {
             try {
-                const querySnapshot = await getDocs(collection(db, 'EG_Materials'));
+                const querySnapshot = await getDocs(collection(db, 'Quarries'));
                 const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
                 // Fetch the download URL for each image (main image) and additional images
@@ -88,7 +88,7 @@ const MaterialDetail = () => {
     const filteredItem = data.filter(item => item.id === id);
 
     return (
-        <div className="materialdetail">
+        <div className="quarrydetail">
             {filteredItem.length > 0 ? (
                 filteredItem.map(item => (
                     <div className='wrapper' key={item.id}>
@@ -150,4 +150,4 @@ const MaterialDetail = () => {
     );
 };
 
-export default MaterialDetail;
+export default QuarryDetail;

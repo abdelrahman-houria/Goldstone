@@ -86,6 +86,52 @@ a {
 .app .layout {
   position: relative;
 }
+.app .layout .quarrydetail .line {
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  border-radius: 25px;
+  margin: 50px auto;
+}
+.app .layout .quarrydetail .wrapper .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+@media (max-width: 1250px) {
+  .app .layout .quarrydetail .wrapper .card {
+    flex-direction: column;
+  }
+}
+.app .layout .quarrydetail .wrapper .card img {
+  width: 50%;
+  aspect-ratio: 16/9;
+  margin: 50px;
+  border-radius: 25px;
+}
+@media (max-width: 1100px) {
+  .app .layout .quarrydetail .wrapper .card img {
+    width: 100%;
+  }
+}
+.app .layout .quarrydetail .wrapper .card .text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.app .layout .quarrydetail .wrapper .card .text h1 {
+  font-weight: 400;
+  margin: 15px;
+}
+.app .layout .quarrydetail .wrapper .card .text p {
+  line-height: 25px;
+}
 .app .layout .materialdetail .line {
   width: 90%;
   height: 3px;
@@ -114,6 +160,7 @@ a {
 .app .layout .materialdetail .wrapper .card .text h1 {
   font-size: 52px;
   margin: 25px;
+  font-weight: 400;
 }
 .app .layout .materialdetail .wrapper .card .text p {
   line-height: 25px;
@@ -703,6 +750,7 @@ a {
 }
 .app .layout .quarries .section {
   padding: 25px 0px;
+  cursor: pointer;
 }
 .app .layout .quarries .section:nth-child(even) {
   background-color: black;

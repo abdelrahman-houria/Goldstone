@@ -18,7 +18,7 @@ const Layout = () => {
     };
 
     const handleScroll = () => {
-      const sticky = window.scrollY > 0;
+      const sticky = window.scrollY > 100;
       setIsSticky(sticky);
     };
 
