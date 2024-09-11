@@ -25,15 +25,30 @@ const Contact = () => {
                 const querySnapshot = await getDocs(collection(db, 'Contact_Icons'));
                 const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-                // Fetch the download URL for each image
+                // Fetch the download URL for each image and icon
                 const itemsWithUrls = await Promise.all(items.map(async (item) => {
                     try {
-                        const imageRef = ref(storage, item.url); // Reference to the image
-                        const imageUrl = await getDownloadURL(imageRef); // Get download URL
-                        return { ...item, imageUrl };
+                        const imageRef = ref(storage, item.url); // Reference to the main image
+                        const imageUrl = await getDownloadURL(imageRef); // Get main image download URL
+
+                        // Fetch the download URL for icon if it exists
+                        let iconUrl = '';
+                        if (item.icon) {
+                            const iconRef = ref(storage, item.icon);
+                            iconUrl = await getDownloadURL(iconRef);
+                        }
+
+                        // Fetch the download URL for icon2 if it exists
+                        let icon2Url = '';
+                        if (item.icon2) {
+                            const icon2Ref = ref(storage, item.icon2);
+                            icon2Url = await getDownloadURL(icon2Ref);
+                        }
+
+                        return { ...item, imageUrl, iconUrl, icon2Url };
                     } catch (err) {
-                        console.error('Error fetching image URL:', err);
-                        return { ...item, imageUrl: '' }; // Default or empty URL in case of error
+                        console.error('Error fetching URLs:', err);
+                        return { ...item, imageUrl: '', iconUrl: '', icon2Url: '' }; // Default or empty URLs in case of error
                     }
                 }));
 
@@ -54,7 +69,7 @@ const Contact = () => {
             <div className="spinner"></div>
         </div>
     );
-    
+
     if (error) return (
         <div className="error-container">
             <img src="/Icons/error.png" alt="Error" className="error-icon" />
@@ -63,7 +78,7 @@ const Contact = () => {
         </div>
     );
 
-    return ( 
+    return (
         <div className="contact">
             <div className="text" data-aos="fade-down">
                 <h1>Contact Us.</h1>
@@ -77,12 +92,12 @@ const Contact = () => {
                             <img src={item.imageUrl} alt={item.name} />
                             <h1>{item.name}</h1>
                             <p>
-                                {item.icon && <img src={item.icon} alt={`${item.name} icon`} />} 
+                                {item.iconUrl && <img src={item.iconUrl} alt={`${item.name} icon`} />}
                                 {item.disc}
                             </p>
-                            {item.disc2 && (
+                            {item.icon2Url && (
                                 <p>
-                                    {item.icon2 && <img src={item.icon2} alt={`${item.name} disc2 icon`} />} 
+                                    <img src={item.icon2Url} alt={`${item.name} icon`} />
                                     {item.disc2}
                                 </p>
                             )}
@@ -107,10 +122,10 @@ const Contact = () => {
                 </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d215.79908124532753!2d30.944292856863402!3d30.071688125699662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1725445078820!5m2!1sen!2sde"
-                    width="600" 
-                    height="450"  
-                    allowFullScreen="" 
-                    loading="lazy" 
+                    width="600"
+                    height="450"
+                    allowFullScreen=""
+                    loading="lazy"
                     title="Location"
                     referrerPolicy="no-referrer-when-downgrade"
                     data-aos="fade-up"
