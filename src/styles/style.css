@@ -467,10 +467,17 @@ a {
   font-weight: 400;
   font-size: 18px;
 }
+.app .layout main {
+  padding-top: 70px;
+}
 .app .layout .nav {
   width: 100%;
   background-color: black;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 .app .layout .nav .cont {
   display: flex;
@@ -951,24 +958,25 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 50px;
   color: white;
 }
 .app .layout .about .cont .cards .card {
-  width: 20%;
-  margin: 0px 15px;
+  margin: 0px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex: 1;
 }
 .app .layout .about .cont .cards .card img {
   max-width: 75px;
+  margin: 25px 0px;
 }
 .app .layout .about .cont .cards .card h1, .app .layout .about .cont .cards .card p {
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight: 400;
   margin: 10px 0px;
   text-align: center;

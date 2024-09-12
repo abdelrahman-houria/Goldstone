@@ -22,11 +22,11 @@ const Layout = () => {
             </div>
           </div>
           <ul className={`list ${isOpen ? 'open' : ''}`}>
-            <NavLink to="/">HOME</NavLink>
-            <NavLink to="/about">ABOUT</NavLink>
-            <NavLink to="/eg">EGYPTIAN MATERIALS</NavLink>
-            <NavLink to="/quarries">QUARRIES</NavLink>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink onClick={handleBurgerClick} to="/">HOME</NavLink>
+            <NavLink onClick={handleBurgerClick} to="/about">ABOUT</NavLink>
+            <NavLink onClick={handleBurgerClick} to="/eg">EGYPTIAN MATERIALS</NavLink>
+            <NavLink onClick={handleBurgerClick} to="/quarries">QUARRIES</NavLink>
+            <NavLink onClick={handleBurgerClick} to="/contact">CONTACT</NavLink>
           </ul>
         </div>
       </div>
