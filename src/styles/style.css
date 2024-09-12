@@ -733,9 +733,13 @@ a {
   }
   .app .layout .contact .map .cards .card {
     width: 80%;
+    text-align: center;
   }
   .app .layout .contact .map .cards .card p {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .app .layout .quarries .section {
