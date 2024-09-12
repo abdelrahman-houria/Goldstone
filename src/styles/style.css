@@ -497,7 +497,7 @@ a {
 .app .layout .nav .cont .list a {
   min-width: -moz-fit-content;
   min-width: fit-content;
-  margin: 5px;
+  margin: 0px 15px;
 }
 .app .layout .nav .cont .list a:hover {
   color: gold;
