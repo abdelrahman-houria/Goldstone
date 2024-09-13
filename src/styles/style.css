@@ -510,9 +510,11 @@ a {
   }
   .app .layout .nav .cont .list a:hover {
     border-bottom: 1px solid gold;
+    background-color: rgb(40, 40, 40);
   }
   .app .layout .nav .cont .list a.active:hover {
     border-bottom: 1px solid silver;
+    background: transparent;
   }
 }
 .app .layout .nav .cont .burger-cont {
