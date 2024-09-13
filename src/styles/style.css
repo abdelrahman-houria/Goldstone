@@ -467,17 +467,10 @@ a {
   font-weight: 400;
   font-size: 18px;
 }
-.app .layout main {
-  padding-top: 70px;
-}
 .app .layout .nav {
   width: 100%;
   background-color: black;
   padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
 .app .layout .nav .cont {
   display: flex;
@@ -501,9 +494,24 @@ a {
 }
 .app .layout .nav .cont .list a:hover {
   color: gold;
+  border-bottom: 1px solid gold;
 }
 .app .layout .nav .cont .list a.active {
   color: gold;
+  cursor: default;
+}
+.app .layout .nav .cont .list a.active:hover {
+  border-bottom: 1px solid silver;
+}
+@media (max-width: 1150px) {
+  .app .layout .nav .cont .list {
+    min-width: 100%;
+  }
+  .app .layout .nav .cont .list a {
+    min-width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid silver;
+  }
 }
 .app .layout .nav .cont .burger-cont {
   display: flex;
@@ -520,6 +528,9 @@ a {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+}
+.app .layout .nav .cont .burger-cont .burger:hover {
+  cursor: pointer;
 }
 @media (max-width: 1150px) {
   .app .layout .nav .cont .burger-cont .burger {
