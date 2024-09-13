@@ -492,16 +492,9 @@ a {
   min-width: fit-content;
   margin: 0px 15px;
 }
-.app .layout .nav .cont .list a:hover {
-  color: gold;
-  border-bottom: 1px solid gold;
-}
 .app .layout .nav .cont .list a.active {
   color: gold;
   cursor: default;
-}
-.app .layout .nav .cont .list a.active:hover {
-  border-bottom: 1px solid silver;
 }
 @media (max-width: 1150px) {
   .app .layout .nav .cont .list {
@@ -510,6 +503,12 @@ a {
   .app .layout .nav .cont .list a {
     min-width: 100%;
     padding: 5px;
+    border-bottom: 1px solid silver;
+  }
+  .app .layout .nav .cont .list a:hover {
+    border-bottom: 1px solid gold;
+  }
+  .app .layout .nav .cont .list a.active:hover {
     border-bottom: 1px solid silver;
   }
 }
