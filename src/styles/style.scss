@@ -522,7 +522,9 @@
                 a{
                     min-width: fit-content;
                     margin: 0px 15px;
-
+                    &:hover{
+                        color: gold;
+                    }
                     &.active{
                         color: gold;
                         cursor: default;
