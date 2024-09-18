@@ -123,9 +123,52 @@
                         h1{
                             font-weight: 400;
                             margin: 15px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
                         }
                         p{
                             line-height: 25px;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+                .images{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 50px;
+
+                    h1{
+                        font-size: 72px;
+                        margin: 15px 0px;
+                        letter-spacing: 5px;
+                        font-weight: 400;
+                    }
+
+                    .gallery{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+
+                        @media (max-width: 1250px) {
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                        }
+
+                        img, video{
+                            width: 25%;
+                            aspect-ratio: 4/3;
+                            margin: 7px;
+
+                            @media (max-width: 1250px) {
+                                width: 100%;
+                            }
+                        }
+                        video{
+                            background-color: rgba(0, 0, 0, 0.8);
                         }
                     }
                 }
@@ -161,9 +204,12 @@
                             font-size: 52px;
                             margin: 25px;
                             font-weight: 400;
+                            letter-spacing: 3px;
                         }
                         p{
                             line-height: 25px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
                         }
                     }
 
@@ -180,7 +226,7 @@
                     }
 
                 }
-                .images, .videos{
+                .images{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -188,11 +234,13 @@
                     padding: 50px;
 
                     h1{
-                        font-size: 52px;
-                        margin: 25px 0px;
+                        font-size: 72px;
+                        margin: 15px 0px;
+                        letter-spacing: 5px;
+                        font-weight: 400;
                     }
 
-                    .image-gallery{
+                    .gallery{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
@@ -204,24 +252,17 @@
                             flex-wrap: nowrap;
                         }
 
-                        img{
-                            width: 30%;
+                        img, video{
+                            width: 25%;
                             aspect-ratio: 4/3;
-                            margin: 25px;
+                            margin: 7px;
 
                             @media (max-width: 1250px) {
                                 width: 100%;
                             }
                         }
-                    }
-                    .video-gallery{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
                         video{
-                            margin: 50px 0px;
-                            max-width: 100%;
+                            background-color: rgba(0, 0, 0, 0.8);
                         }
                     }
                 }

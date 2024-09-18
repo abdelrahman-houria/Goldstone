@@ -128,9 +128,51 @@ a {
 .app .layout .quarrydetail .wrapper .card .text h1 {
   font-weight: 400;
   margin: 15px;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 .app .layout .quarrydetail .wrapper .card .text p {
   line-height: 25px;
+  letter-spacing: 3px;
+}
+.app .layout .quarrydetail .wrapper .images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.app .layout .quarrydetail .wrapper .images h1 {
+  font-size: 72px;
+  margin: 15px 0px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.app .layout .quarrydetail .wrapper .images .gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1250px) {
+  .app .layout .quarrydetail .wrapper .images .gallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.app .layout .quarrydetail .wrapper .images .gallery img, .app .layout .quarrydetail .wrapper .images .gallery video {
+  width: 25%;
+  aspect-ratio: 4/3;
+  margin: 7px;
+}
+@media (max-width: 1250px) {
+  .app .layout .quarrydetail .wrapper .images .gallery img, .app .layout .quarrydetail .wrapper .images .gallery video {
+    width: 100%;
+  }
+}
+.app .layout .quarrydetail .wrapper .images .gallery video {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .app .layout .materialdetail .line {
   width: 90%;
@@ -161,9 +203,12 @@ a {
   font-size: 52px;
   margin: 25px;
   font-weight: 400;
+  letter-spacing: 3px;
 }
 .app .layout .materialdetail .wrapper .card .text p {
   line-height: 25px;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 .app .layout .materialdetail .wrapper .card img {
   width: 60%;
@@ -176,18 +221,20 @@ a {
     width: 100%;
   }
 }
-.app .layout .materialdetail .wrapper .images, .app .layout .materialdetail .wrapper .videos {
+.app .layout .materialdetail .wrapper .images {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 50px;
 }
-.app .layout .materialdetail .wrapper .images h1, .app .layout .materialdetail .wrapper .videos h1 {
-  font-size: 52px;
-  margin: 25px 0px;
+.app .layout .materialdetail .wrapper .images h1 {
+  font-size: 72px;
+  margin: 15px 0px;
+  letter-spacing: 5px;
+  font-weight: 400;
 }
-.app .layout .materialdetail .wrapper .images .image-gallery, .app .layout .materialdetail .wrapper .videos .image-gallery {
+.app .layout .materialdetail .wrapper .images .gallery {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -195,30 +242,23 @@ a {
   flex-wrap: wrap;
 }
 @media (max-width: 1250px) {
-  .app .layout .materialdetail .wrapper .images .image-gallery, .app .layout .materialdetail .wrapper .videos .image-gallery {
+  .app .layout .materialdetail .wrapper .images .gallery {
     flex-direction: column;
     flex-wrap: nowrap;
   }
 }
-.app .layout .materialdetail .wrapper .images .image-gallery img, .app .layout .materialdetail .wrapper .videos .image-gallery img {
-  width: 30%;
+.app .layout .materialdetail .wrapper .images .gallery img, .app .layout .materialdetail .wrapper .images .gallery video {
+  width: 25%;
   aspect-ratio: 4/3;
-  margin: 25px;
+  margin: 7px;
 }
 @media (max-width: 1250px) {
-  .app .layout .materialdetail .wrapper .images .image-gallery img, .app .layout .materialdetail .wrapper .videos .image-gallery img {
+  .app .layout .materialdetail .wrapper .images .gallery img, .app .layout .materialdetail .wrapper .images .gallery video {
     width: 100%;
   }
 }
-.app .layout .materialdetail .wrapper .images .video-gallery, .app .layout .materialdetail .wrapper .videos .video-gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.app .layout .materialdetail .wrapper .images .video-gallery video, .app .layout .materialdetail .wrapper .videos .video-gallery video {
-  margin: 50px 0px;
-  max-width: 100%;
+.app .layout .materialdetail .wrapper .images .gallery video {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .app .layout .home .slogan {
   display: flex;

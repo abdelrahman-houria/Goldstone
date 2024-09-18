@@ -102,38 +102,24 @@ const MaterialDetail = () => {
                         {item.imagesWithUrls && item.imagesWithUrls.length > 0 && (
                             <div className="line" data-aos="fade-in"></div>
                         )}
-                        {item.imagesWithUrls && item.imagesWithUrls.length > 0 && (
+                        {item.imagesWithUrls && item.imagesWithUrls.length > 0 && item.videosWithUrls && item.videosWithUrls.length > 0 && (
                             <div className="images" data-aos="fade-up" data-aos-delay="200">
                                 <h1>Gallery</h1>
-                                <div className="image-gallery">
+                                <div className="gallery">
                                     {item.imagesWithUrls.map((url, index) => (
                                         <img
                                             key={index}
                                             src={url}
                                             alt={`Quarry ${index + 1}`}
                                             className="additional-image"
-                                            data-aos="fade-up"
-                                            data-aos-delay="200" 
                                         />
                                     ))}
-                                </div>
-                            </div>
-                        )}
-                        {item.videosWithUrls && item.videosWithUrls.length > 0 && (
-                            <div className="line"></div>
-                        )}
-                        {item.videosWithUrls && item.videosWithUrls.length > 0 && (
-                            <div className="videos" data-aos="fade-up" data-aos-delay="200">
-                                <h1>Videos</h1>
-                                <div className="video-gallery">
                                     {item.videosWithUrls.map((url, index) => (
                                         <video
                                             key={index}
                                             src={url}
                                             controls
                                             className="video"
-                                            data-aos="fade-up"
-                                            data-aos-delay="200" 
                                         >
                                             Your browser does not support the video tag.
                                         </video>
